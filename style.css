@@ -1,0 +1,20 @@
+* {
+  color: Ivory;
+  background-color: DarkSlateGrey;
+  margin: 20px;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Tangerine', serif;
+  font-size: 36px;
+}
+
+small{
+  font-family: 'Crimson Text', serif;
+  font-size: 16px;
+  text-align: justify;
+}
