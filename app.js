@@ -61,3 +61,4 @@ function multiplyArray(n) {
   var multiplyArrayDisplay = document.getElementById('multiplyArrayText');
   multiplyArrayDisplay.textContent = n.join(" and ") + ' were passed in as an array of number, and ' + product + ' is their product.';
 }
+//Thanks for all the help with the code today!
