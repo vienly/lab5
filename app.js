@@ -1,28 +1,33 @@
-function sum(n1, n2) {
+function sum(n1, n2, dontPrint) {
   var s = n1 + n2;
 
   console.log('\"The sum of ' + n1 + ' and ' + n2 + ' is ' + s + '.\"');
 
-  var sumDisplay = document.getElementById('sumText');
-  sumDisplay.textContent = '\"The sum of ' + n1 + ' and ' + n2 + ' is ' + s + '.\"';
+  if(!dontPrint) {
+    var sumDisplay = document.getElementById('sumText');
+    sumDisplay.textContent = '\"The sum of ' + n1 + ' and ' + n2 + ' is ' + s + '.\"';
+  }
 
   return s;
 }
 
-function multiply(n1, n2) {
+function multiply(n1, n2, dontPrint) {
   var product = n1 * n2;
 
   console.log('\"The product of ' + n1 + ' and ' + n2 + ' is ' + product + '.\"');
 
-  var productDisplay = document.getElementById('productText');
-  productDisplay.textContent = '\"The product of ' + n1 + ' and ' + n2 + ' is ' + product + '.\"';
+  if(!dontPrint) {
+    var productDisplay = document.getElementById('productText');
+    productDisplay.textContent = '\"The product of ' + n1 + ' and ' + n2 + ' is ' + product + '.\"';
+  }
 
   return product;
 }
 
 function sumAndMultiply(n1, n2, n3) {
-  var s = sum(sum(n1, n2), n3);
-  var product = multiply((n1, n2), n3);
+  var dontPrint = true;
+  var s = sum(sum(n1, n2, dontPrint), n3, dontPrint);
+  var product = multiply((n1, n2, dontPrint), n3, dontPrint);
 
   console.log('\"The sum of ' + n1 + ' and ' + n2 + ' and ' + n3 + ' is ' + s + '.\"');
   console.log('\"The numbers' + n1 + ' and ' + n2 + ' and ' + n3 + ' have a product of ' + product + '.\"');
